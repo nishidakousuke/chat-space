@@ -39,7 +39,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|text|null: false, foreign_key: true, unique: true|
+|email|text|null: false, unique: true|
 |password|text|null: false|
 
 ### Association
