@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## membersテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -43,7 +43,7 @@ Things you may want to cover:
 |password|text|null: false|
 
 ### Association
-- has_many :groups
+- has_many :groups, through: :users_groups
 - has_many :messages
 
 ## messagesテーブル
@@ -66,6 +66,6 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- has_many :users
+- has_many :users, through: :users_groups
 - has_many :messages
 
