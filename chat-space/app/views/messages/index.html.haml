@@ -1,57 +1,57 @@
-%div{class: "header"}
-  %div{class: "header__text"}
+%div.header
+  %div.header__text
     グループを作成しました
 
 
-%div{class: "left-content"}
-  %div{class: "left-content__top"}
-    %P{class: "left-content__top--text"}
+%div.left-content
+  %div.left-content__top
+    %P.left-content__top--text
       test-
-    %ul{class: "font-box"}
-      %li{class: "font-box__icon"}
-        %a{href: "#", class: "font-box__icon--link"}
+    %ul.font-box
+      %li.font-box__icon
+        %a.font-box__icon--link{href: "#"}
           %i{class: "fa fa-edit"}
-      %li{class: "font-box__icon"}
-        %a{href: "#", class: "font-box__icon--link"}
+      %li.font-box__icon
+        %a.font-box__icon--link{href: "#"}
           %i{class: "fa fa-cog"}
 
-  %div{class: "left-content__bottom"}
-    %div{class: "left-content__bottom-box"}
-      %p{class: "left-content__bottom-box--text"}
+  %div.left-content__bottom
+    %div.left-content__bottom-box
+      %p.left-content__bottom-box--text
         test-
-      %p{class: "left-content__bottom-box--comment"}
+      %p.left-content__bottom-box--comment
         さようなら
 
 
-%div{class: "right-content"}
-  %div{class: "right-content__top"}
-    %div{class: "right-content__top-box"}
-      %h2{class: "right-content__top-box--text"}
+%div.right-content
+  %div.right-content__top
+    %div.right-content__top-box
+      %h2.right-content__top-box--text
         text-group
-      %p{class: "right-content__top-box--member"}
+      %p.right-content__top-box--member
         name
-    %div{class: "right-content__top-editbox"}
-      %a{href: "#", class: "right-content__top-editbox--edit"}
+    %div.right-content__top-editbox
+      %a.right-content__top-editbox--edit{href: "#"}
         Edit
 
-  %div{class: "right-content__center"}
-    %div{class: "right-content__center-box"}
-      %div{class: "comment-box"}
-        %p{class: "comment-box--user"}
+  %div.right-content__center
+    %div.right-content__center-box
+      %div.comment-box
+        %p.comment-box--user
           test-user
-        %p{class: "comment-box--data"}
+        %p.comment-box--data
           2019/04/13
-      %p{class: "right-content__center-box--review"}
+      %p.right-content__center-box--review
         こんにちは！
 
-  %div{class: "right-content__bottom"}
-    %form{class: "form-box"}
-      %div{class: "message-box"}
-        %input{placeholder: "type a message", class: "message-box--message"}
-        %label{class: "message-box__label"}
-          %input{class: "message-box__label--input", type: "file", accept: "image/*"}
+  %div.right-content__bottom
+    %form.form-box
+      %div.message-box
+        %input.message-box--message{placeholder: "type a message"}
+        %label.message-box__label
+          %input.message-box__label--input{type: "file", accept: "image/*"}
           %i{class: "fa fa-image"}
-      %input{class: "form-box--sent", type: "submit", value: "SEND"}
+      %input.form-box--sent{type: "submit", value: "SEND"}
 
 
 
