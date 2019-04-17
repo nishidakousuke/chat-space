@@ -4,32 +4,24 @@
   .right-content__top
     .right-content__top-box
       %h2.right-content__top-box--text
-        text-group
+        group
       %p.right-content__top-box--member
         name
     .right-content__top-editbox
       = link_to edit_group_path(current_user), class: "right-content__top-editbox--edit" do
         Edit
-
-
+  
   .right-content__center
-    .right-content__center-box
-      .comment-box
-        %p.comment-box--user
-          test-user
-        %p.comment-box--data
-          2019/04/13
-      %p.right-content__center-box--review
-        こんにちは！
+    = render @messages
 
   .right-content__bottom
-    %form.form-box
+    = form_for [@group, @message], :html => {class: "form-box"} do |f|
       .message-box
-        %input.message-box--message{placeholder: "type a message"}
-        %label.message-box__label
-          %input.message-box__label--input{type: "file", accept: "image/*"}
-          %i{class: "fa fa-image"}
-      %input.form-box--sent{type: "submit", value: "SEND"}
+        = f.text_field :body, class: 'message-box--message', placeholder: 'type a message'
+        = f.label :image, class:'message-box__label' do
+          = f.file_field :image, class: 'message-box__label--input', type: "file", accept: "image/*"
+          = fa_icon 'picture-o', class: "fa fa-image"
+      = f.submit 'Send', class: 'form-box--sent', type: "submit", value: "SEND"
 
 
 

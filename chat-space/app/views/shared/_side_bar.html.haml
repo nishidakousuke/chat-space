@@ -14,9 +14,9 @@
 
   .left-content__bottom
     - current_user.groups.each do |group|
-      =link_to group_messages_path(group), class: "left-content__bottom--link"  do
+      = link_to group_messages_path(group), class: "left-content__bottom--link"  do
         .left-content__bottom-box
           %p.left-content__bottom-box--text
             = group.name
           %p.left-content__bottom-box--comment
-            メッセージはまだありません。
+            = group.show_last_message
