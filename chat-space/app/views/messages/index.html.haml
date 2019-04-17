@@ -1,24 +1,4 @@
-.left-content
-  .left-content__top
-    %P.left-content__top--text
-      = current_user.name
-    %ul.font-box
-      %li.font-box__icon
-        = link_to new_group_path do
-          = fa_icon 'pencil-square-o', class: 'font-box__icon--link'
-      %li.font-box__icon
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'font-box__icon--link'
-
-  .left-content__bottom
-    - current_user.groups.each do |group|
-      =link_to group_messages_path(group), class: "left-content__bottom--link"  do
-        .left-content__bottom-box
-          %p.left-content__bottom-box--text
-            = group.name
-          %p.left-content__bottom-box--comment
-            メッセージはまだありません。
-
+= render 'shared/side_bar';
 
 .right-content
   .right-content__top
@@ -28,8 +8,9 @@
       %p.right-content__top-box--member
         name
     .right-content__top-editbox
-      %a.right-content__top-editbox--edit{href: "#"}
+      = link_to edit_group_path(current_user), class: "right-content__top-editbox--edit" do
         Edit
+
 
   .right-content__center
     .right-content__center-box

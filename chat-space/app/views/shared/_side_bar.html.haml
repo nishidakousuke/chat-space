@@ -1,19 +1,22 @@
-.side-bar
-  .header
-    %h3.header__name
+.left-content
+
+  .left-content__top
+    %P.left-content__top--text
       = current_user.name
-    %ul.header__lists
-      %li.list
-        = link_to new_groups_path do
-          = fa_icon 'pencil-square-o', class: 'icon'
-      %li.list
-        = link_to edit_user_path do
-          = fa_icon 'cog', class: 'icon'
-  .groups
+    %ul.font-box
+      %li.font-box__icon
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'font-box__icon--link'
+      %li.font-box__icon
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'font-box__icon--link'
+
+
+  .left-content__bottom
     - current_user.groups.each do |group|
-      .group
-        = link_to group_messages_path(group) do
-          .group__name
+      =link_to group_messages_path(group), class: "left-content__bottom--link"  do
+        .left-content__bottom-box
+          %p.left-content__bottom-box--text
             = group.name
-          .group__message
+          %p.left-content__bottom-box--comment
             メッセージはまだありません。
