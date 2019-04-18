@@ -38,7 +38,7 @@
     .left-content__bottom {
         background-color: #2f3e51;
         width: 300px;
-        height: 590px;
+        height: calc(100vh - 100px);
         &--link {
           text-decoration: none;
         }
@@ -92,7 +92,7 @@
     &__center {
         width: calc(100vw - 300px);
         background-color: #fafafa;
-        height: 500px;
+        height: calc(100vh - 190px);
         &-box {
           padding: 46px 0 40px 40px;
             .comment-box {
