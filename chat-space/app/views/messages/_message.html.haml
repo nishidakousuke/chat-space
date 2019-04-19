@@ -1,0 +1,9 @@
+.right-content__center-box
+  .comment-box
+    %p.comment-box--user
+      = message.user.name
+    %p.comment-box--data
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  %p.right-content__center-box--review
+    = message.body
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
