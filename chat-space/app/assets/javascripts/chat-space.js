@@ -1,5 +1,6 @@
 $(function(){
   function buildHTML(message){
+    var imageHTML = message.image.url === null ? '' : `<img src="${message.image.url}">`;
     var html = `<div class="right-content__center-box">
                   <div class="comment-box"> 
                     <p class="comment-box--user">
@@ -11,15 +12,9 @@ $(function(){
                   </div>
                   <p class="right-content__center-box--review">
                     ${message.body}
-                  </p>`;
-
-    var html2 = ``;
-
-    message.image.url === null ? html2 = `` : html2 = `<img src="${message.image.url}">`;
-
-    var html3 = `</div>`;
-
-    html = html + html2 + html3;
+                  </p>
+                  ${imageHTML}
+                </div>`;
 
     return html;
   }
