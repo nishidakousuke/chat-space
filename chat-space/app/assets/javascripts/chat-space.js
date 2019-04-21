@@ -15,11 +15,7 @@ $(function(){
 
     var html2 = ``;
 
-    if (message.image.url === null) {
-      html2 = ``;
-    } else {
-      html2 = `<img src="${message.image.url}">`;
-    }
+    message.image.url === null ? html2 = `` : html2 = `<img src="${message.image.url}">`;
 
     var html3 = `</div>`;
 
@@ -41,8 +37,6 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      console.log(data);
-      console.log(html);
       $('.right-content__center').append(html);
       $('.message-box--message').val('');
       $('.right-content__center').animate({scrollTop: $('.right-content__center')[0].scrollHeight}, 500);
