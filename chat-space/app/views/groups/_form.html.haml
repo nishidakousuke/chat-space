@@ -31,7 +31,7 @@
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       /
     
-  - if @groups != nil
+  - if @groups.present?
     - @groups.each do |group|
       #chat-group-users
         #chat-group-user-22.chat-group-user.clearfix
@@ -39,7 +39,7 @@
           %p.chat-group-user__name
             = group.name
 
-  - elsif @groups == nil
+  - else
     #chat-group-users
       #chat-group-user-22.chat-group-user.clearfix
         = f.text_field :user_id, name: "group[user_ids][]", type: 'hidden', value: current_user.id
@@ -47,10 +47,9 @@
           = current_user.name
 
   #chat-group-form__field.text
-
-  -# = f.hidden_field :user_id, name: "group[user_ids][]", value: user.id
         
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'
+      
