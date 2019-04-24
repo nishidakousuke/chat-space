@@ -4,7 +4,7 @@ $(function(){
 
     function appendUser(user) {
         var html = `<div class="chat-group-user clearfix">
-                      <p classs="chat-group-user__name"id="test">${user.name}</p>
+                      <p classs="chat-group-user__name" id="test">${user.name}</p>
                       <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" id="${user.id}" data-user-name="${user.name}">追加</a>
                     </div>`;
         search_list.append(html);
