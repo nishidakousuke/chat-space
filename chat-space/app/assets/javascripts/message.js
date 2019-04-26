@@ -31,7 +31,6 @@ $(function() {
           dataType: 'json',
           data: {id: last_message_id}
         })
-        
         .done(function(messages) {
           messages.forEach(function(message){
               var insertHTML = buildMessageHTML(message);
@@ -40,7 +39,7 @@ $(function() {
           $('.right-content__center').animate({scrollTop: $('.right-content__center')[0].scrollHeight}, 500);
         })
         .fail(function() {
-          console.log('error');
+          alert('自動更新に失敗しました');
         });
        } else {
         clearInterval();
