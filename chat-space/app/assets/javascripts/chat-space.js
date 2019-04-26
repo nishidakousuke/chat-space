@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     var imageHTML = message.image.url === null ? '' : `<img src="${message.image.url}">`;
-    var html = `<div class="right-content__center-box">
+    var html = `<div class="right-content__center-box" data-id="${message.id}">
                   <div class="comment-box"> 
                     <p class="comment-box--user">
                       ${message.user_name}
