@@ -64,12 +64,12 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'dotenv-rails'
-gem 'capistrano'
-gem 'capistrano-rbenv'
-gem 'capistrano-bundler'
-gem 'capistrano-rails'
-gem 'capistrano3-unicorn'
 
 group :production do
   gem 'unicorn', '5.4.1'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
