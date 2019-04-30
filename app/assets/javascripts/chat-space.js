@@ -34,6 +34,7 @@ $(function(){
       var html = buildHTML(data);
       $('.right-content__center').append(html);
       $('.message-box--message').val('');
+      $('.message-box__label--input').val('');
       $('.right-content__center').animate({scrollTop: $('.right-content__center')[0].scrollHeight}, 500);
     })
     .fail(function(){
